@@ -1,0 +1,18 @@
+{
+  "name": "DolarToday Menubar",
+  "version": "1.0.0",
+  "description": "app dolartoday client API for menu osx",
+  "dependencies": {
+    "jquery": "^2.2.0",
+    "menubar": "*",
+  },
+  "devDependencies": {
+    "electron-packager": "^5.1.0",
+    "electron-prebuilt": "^0.34.1"
+  },
+  "main": "main.js",
+  "scripts": {
+    "build": "electron-packager . Example --platform=darwin --arch=x64 --version=0.34.1 --icon=Icon.icns",
+    "start": "electron ."
+  }
+}

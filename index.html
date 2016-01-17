@@ -1,0 +1,27 @@
+<html>
+<head>
+<title>Example App</title>
+<body>
+<div class="content">
+	<ul id="list">
+	
+	</ul>
+</div>
+<script src="jquery.js"></script>
+<script type="text/javascript">
+//jquery 
+//window.$ = window.jQuery = require('jquery');
+var url = "https://s3.amazonaws.com/dolartoday/data.json";
+function loadData(){
+	$.getJSON(url, function(data){
+		$('#list').html('<li>Dolar: '+data.USD.transferencia+'</li> <li>Euro: '+data.EUR.transferencia+'</li>');
+ });
+	setTimeout("loadData()",5000);
+}
+$(document).ready(function(){ 
+//DOCUMENT READY FUNCTION
+    loadData();
+}); 
+</script>
+</body>
+</html>
